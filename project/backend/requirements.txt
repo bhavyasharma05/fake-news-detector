@@ -6,6 +6,6 @@ wheel
 
 fastapi==0.104.1
 uvicorn[standard]==0.24.0
-pydantic>=2.39.0
+pydantic>=2.11.7
 
 aiohttp>=3.8,<4.0
