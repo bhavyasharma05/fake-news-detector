@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fake News Detector</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="popup-container">
+        <div class="header">
+            <span class="logo">🕵️‍♂️</span>
+            <span class="header-title">Fake News Detector</span>
+        </div>
+        <textarea id="snippet-input" class="snippet-input" rows="5" placeholder="Paste or select text from the page to analyze..."></textarea>
+        <div class="button-row">
+            <button id="analyze-btn" class="analyze-btn"><span class="btn-icon">🔎</span> Analyze Selected Text</button>
+            <button id="auto-btn" class="auto-btn"><span class="btn-icon">⚡</span> Auto</button>
+        </div>
+        <div id="loader" class="loader" style="display:none;"></div>
+        <div id="analysis-card" class="card hidden">
+            <div class="score-section">
+                <span id="score" class="score"></span>
+                <span id="label" class="label"></span>
+            </div>
+            <div id="explanation" class="explanation"></div>
+            <div id="sources" class="sources"></div>
+            <div class="footer">
+                <span id="url" class="url"></span>
+                <span id="timestamp" class="timestamp"></span>
+                <button id="refresh-btn" class="refresh-btn"><span class="btn-icon">🔄</span> Refresh Analysis</button>
+            </div>
+        </div>
+        <div id="error-card" class="card error hidden">
+            <span id="error-message"></span>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

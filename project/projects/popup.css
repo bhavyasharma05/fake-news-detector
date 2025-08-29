@@ -1,0 +1,233 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    margin: 0;
+    padding: 0;
+    min-width: 370px;
+}
+
+.popup-container {
+    padding: 22px 18px 18px 18px;
+    max-width: 400px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.logo {
+    font-size: 2em;
+    margin-right: 10px;
+}
+
+.header-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #2d3a4b;
+    letter-spacing: 1px;
+}
+
+.title {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 12px;
+    color: #2d3a4b;
+    letter-spacing: 1px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(44, 62, 80, 0.13);
+    padding: 22px 18px 18px 18px;
+    margin-bottom: 18px;
+    transition: box-shadow 0.3s, transform 0.3s;
+    opacity: 1;
+    animation: fadeIn 0.7s;
+}
+
+.card.hidden {
+    display: none;
+}
+
+.card.error {
+    border-left: 5px solid #e74c3c;
+    color: #e74c3c;
+}
+
+.score-section {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.score {
+    font-weight: bold;
+    color: #2980b9;
+    font-size: 1.5em;
+}
+
+.label {
+    font-weight: bold;
+    padding: 5px 14px;
+    border-radius: 10px;
+    background: #f1f8e9;
+    color: #388e3c;
+    font-size: 1.08em;
+    box-shadow: 0 1px 4px rgba(44, 62, 80, 0.07);
+}
+
+.label.Uncertain {
+    background: #fffde7;
+    color: #fbc02d;
+}
+
+.label.Fake {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.explanation {
+    margin: 12px 0;
+    font-size: 1.08em;
+    color: #34495e;
+}
+
+.snippet-input {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #b2bec3;
+    padding: 12px;
+    font-size: 1em;
+    margin-bottom: 12px;
+    resize: vertical;
+    box-sizing: border-box;
+    background: #f8fafc;
+    transition: border 0.2s;
+}
+
+.snippet-input:focus {
+    border: 1.5px solid #2980b9;
+    outline: none;
+}
+
+.analyze-btn, .refresh-btn {
+    background: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 22px;
+    cursor: pointer;
+    font-size: 1.08em;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+    transition: background 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.analyze-btn:hover, .refresh-btn:hover {
+    background: #2ecc71;
+    box-shadow: 0 4px 16px rgba(44, 62, 80, 0.12);
+}
+
+.btn-icon {
+    font-size: 1.2em;
+}
+
+.loader {
+    display: block;
+    margin: 30px auto;
+    width: 48px;
+    height: 48px;
+    border: 6px solid #b2bec3;
+    border-top: 6px solid #2980b9;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.sources {
+    margin-top: 12px;
+    font-size: 0.98em;
+}
+
+.sources .source-item {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 10px;
+    background: #f4f8fb;
+    box-shadow: 0 1px 4px rgba(44, 62, 80, 0.07);
+}
+
+.sources .source-item strong {
+    color: #2980b9;
+    font-size: 1em;
+}
+
+.sources .source-item a {
+    color: #27ae60;
+    text-decoration: underline;
+    word-break: break-all;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    font-size: 0.98em;
+    color: #7f8c8d;
+}
+
+.url {
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.timestamp {
+    margin-left: 10px;
+}
+
+.button-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.auto-btn {
+    background: #fbc02d;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 22px;
+    cursor: pointer;
+    font-size: 1.08em;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+    transition: background 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.auto-btn:hover {
+    background: #ffd600;
+    box-shadow: 0 4px 16px rgba(44, 62, 80, 0.12);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0);}
+}
